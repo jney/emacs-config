@@ -4,6 +4,9 @@
 ;; Automatically reload files that have been changed outside Emacs
 (global-auto-revert-mode t)
 
+;; utf-8 please
+(prefer-coding-system 'utf-8)
+
 ;; Blinking vertical bars are all the cursory rage...
 (setq cursor-type 'bar)
 (blink-cursor-mode t)

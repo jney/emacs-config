@@ -9,7 +9,7 @@
 
 ;; some navigation
 (global-set-key [(super down)] 'end-of-buffer)
-(global-set-key [(super left)] 'beginning-of-line)
+(global-set-key [(super left)] 'beginning-of-line-text)
 (global-set-key [(super right)] 'end-of-line)
 (global-set-key [(super up)] 'beginning-of-buffer)
 

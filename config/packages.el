@@ -14,6 +14,10 @@
         ;; misc
         (:name anything
                :after (lambda () (load "config/modes/anything")))
+        (:name auto-complete)
+        (:name auto-complete-yasnippet
+               :type http
+               :url "http://www.cx4a.org/pub/auto-complete-yasnippet.el")
         (:name autopair)
         (:name erc)
         (:name magit)
@@ -21,8 +25,6 @@
         (:name naquadah-theme
                :after (lambda () (require 'naquadah-theme)))
         (:name rainbow-mode)
-        (:name smart-tab
-               :after (lambda () (load "config/modes/smart-tab")))
         (:name tabbar
                :type elpa)
         (:name tabbar-ruler
@@ -60,9 +62,8 @@
         (:name coffee-mode)
         (:name jade-mode
                :type git
-               :url "https://github.com/brianc/jade-mode.git"
-               :after (lambda () (load "config/modes/jade"))
-               )
+               :url "https://github.com/brianc/jade-mode.git")
+
         ;; clojure related packages
         (:name clojure-mode
                :type elpa
@@ -82,6 +83,7 @@
                :type http
                :url "https://github.com/pft/elisp-assorted/raw/master/css-check.el"
                :load "css-check.el")
+
         )
       )
 

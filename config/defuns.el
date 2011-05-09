@@ -15,6 +15,14 @@
   (kill-line 0))
 
 ;;
+(defun jney-complete-or-indent ()
+  "Complete or indent"
+  (interactive)
+  (if mark-active
+      (textmate-shift-right)
+    ()))
+
+;;
 (defun jney-copy-current-line ()
   "Copy current line omitting indentation."
   (interactive)
@@ -104,6 +112,20 @@
        (mode-fn (intern (concat mode "-mode"))))
     (when (functionp mode-fn)
       (funcall mode-fn))))
+
+;; Functions for configuring window geometry and placement
+(defun jney-smart-split ()
+  "Split the frame into 80-column sub-windows, and make sure no window has
+   fewer than 80 columns."
+  ; From http://hjiang.net/archives/253
+  (interactive)
+  (defun jney-smart-split-helper (w)
+    "Helper function to split a given window into two, the first of which has
+     80 columns."
+    (if (> (window-width w) (* 2 81))
+    (let ((w2 (split-window w 82 t)))
+      (jney-smart-split-helper w2))))
+  (jney-smart-split-helper nil))
 
 ;; function to open a new tab, suppressing new frame creation
 (defun jney-tabbar-new-tab (&optional mode)
