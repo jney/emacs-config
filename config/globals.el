@@ -20,9 +20,6 @@
 ;; Can delete a selected region
 (delete-selection-mode t)
 
-;; Decent font choice
-(set-frame-font "Meslo LG M DZ-")
-
 ;; Wrap at 80 chars
 (set-default 'fill-column 80)
 
@@ -33,7 +30,7 @@
 (setq ns-pop-up-frames nil)
 
 ;; Line numbers
-(setq linum-format " %d ")
+(setq linum-format "%3d ")
 (global-linum-mode t)
 
 ;; reopen last session
