@@ -50,6 +50,7 @@
 (defun jney-delete-line ()
   "Delete current line."
   (interactive)
+  (insert "_")
   (beginning-of-line)
   (kill-line)
   (kill-line))
