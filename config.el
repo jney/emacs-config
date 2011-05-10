@@ -20,6 +20,7 @@
 (load "config/modes/css")
 (load "config/modes/eshell")
 (load "config/modes/jade")
+(load "config/modes/js")
 (load "config/modes/org")
 (load "config/modes/shell")
 (load "config/modes/whitespace")
