@@ -15,14 +15,6 @@
   (kill-line 0))
 
 ;;
-(defun jney-complete-or-indent ()
-  "Complete or indent"
-  (interactive)
-  (if mark-active
-      (textmate-shift-right)
-    ()))
-
-;;
 (defun jney-copy-current-line ()
   "Copy current line omitting indentation."
   (interactive)

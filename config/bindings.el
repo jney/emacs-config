@@ -3,7 +3,7 @@
 
 ;; some deletion
 (global-set-key [backspace] 'jney-backward-delete-rectangle-or-region-or-char)
-(global-set-key [(control backspace)] 'backward-kill-word)
+(global-set-key [(alt backspace)] 'backward-kill-word)
 (global-set-key [(super backspace)] 'jney-backward-kill-line)
 (global-set-key [(super shift k)] 'jney-delete-line)
 
@@ -33,9 +33,12 @@
 ;; tabbar
 (global-set-key [(super t)] 'jney-tabbar-new-tab)
 (global-set-key [(super return)] 'jney-toggle-fullscreen)
-(global-set-key [(control tab)] 'tabbar-forward-tab)
-(global-set-key [(control shift tab)] 'tabbar-backward-tab)
+(global-set-key [(super alt left)] 'tabbar-backward-tab)
+(global-set-key [(super alt right)] 'tabbar-forward-tab)
 
 ;; magit
 (global-set-key [(control shift g)] 'magit-status)
 
+;; indent
+(global-set-key [(super control left)] 'textmate-shift-left)
+(global-set-key [(super control right)] 'textmate-shift-right)
