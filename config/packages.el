@@ -19,7 +19,6 @@
                :type http
                :url "http://www.cx4a.org/pub/auto-complete-yasnippet.el")
         (:name autopair)
-        (:name erc)
         (:name magit)
         (:name markdown-mode)
         (:name naquadah-theme
