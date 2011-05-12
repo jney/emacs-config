@@ -25,7 +25,7 @@
         (:name magit)
         (:name markdown-mode)
         (:name naquadah-theme
-               :after (lambda () (require 'naquadah-theme)))
+               :load "naquadah-theme.el")
         (:name rainbow-mode)
         (:name nav)
         (:name tabbar
