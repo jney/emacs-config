@@ -15,14 +15,18 @@
 (load "config/bindings")
 (load "config/globals")
 ;; load some modes
+(load "config/modes/anything")
 (load "config/modes/auto-complete")
 (load "config/modes/coffee")
 (load "config/modes/css")
 (load "config/modes/eshell")
 (load "config/modes/jade")
 (load "config/modes/js")
+(load "config/modes/nav")
 (load "config/modes/org")
+(load "config/modes/ruby")
 (load "config/modes/shell")
+(load "config/modes/tabbar")
 (load "config/modes/whitespace")
 
 (if (file-exists-p system-type-specific-config)

@@ -15,6 +15,14 @@
   (kill-line 0))
 
 ;;
+(defun jney-close-tab ()
+  (interactive)
+  (when (functionp 'tabbar-mode)
+    (tabbar-mode 0)
+    (tabbar-mode 1))
+  (kill-buffer-and-window))
+
+;;
 (defun jney-copy-current-line ()
   "Copy current line omitting indentation."
   (interactive)
@@ -57,13 +65,6 @@
     (forward-line -1)))
 
 ;;
-(defun jney-indent ()
-  "Add indentation at the beginning of the line."
-  (interactive)
-  (beginning-of-line)
-  (insert "  "))
-
-;;
 (defun jney-move-one-line-downward ()
   "Move current line downward once."
   (interactive)
@@ -77,6 +78,10 @@
   (interactive)
   (transpose-lines 1)
   (forward-line -2))
+
+;;
+(defun jney-reload-config ()
+  (load-file "~/.emacs.d/init"))
 
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun jney-rename-file-and-buffer (new-name)
@@ -136,3 +141,9 @@ if specified), in current window."
       (ns-toggle-fullscreen)
     (toggle-fullscreen)))
 
+;;
+(defun jney-toggle-nav ()
+  "Toggle nav."
+  (interactive)
+  (if (eq nil (get-buffer "*nav*"))
+      (nav)))

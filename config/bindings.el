@@ -14,7 +14,7 @@
 (global-set-key [(super up)] 'beginning-of-buffer)
 
 ;; deals with buffer
-(global-set-key [(super w)] 'kill-buffer-and-window)
+(global-set-key [(super w)] 'jney-close-tab)
 (global-set-key [(super b)] 'anything-for-buffers)
 (global-set-key [(super shift s)] 'jney-rename-file-and-buffer)
 
@@ -29,6 +29,9 @@
 ;; move current line
 (global-set-key [(control super down)] 'jney-move-one-line-downward)
 (global-set-key [(control super up)] 'jney-move-one-line-upward)
+
+;; nav
+(global-set-key [(super n)] 'jney-toggle-nav)
 
 ;; tabbar
 (global-set-key [(super t)] 'jney-tabbar-new-tab)

@@ -12,23 +12,26 @@
 (setq el-get-sources
       '(
         ;; misc
-        (:name anything
-               :after (lambda () (load "config/modes/anything")))
+        (:name anything)
         (:name auto-complete)
         (:name auto-complete-yasnippet
                :type http
                :url "http://www.cx4a.org/pub/auto-complete-yasnippet.el")
         (:name autopair)
+        (:name dedicated
+               :type http
+               :url "https://bitbucket.org/jek/dot-emacs/raw/31c6d525e006/el/emacs-goodies-el/dedicated.el"
+               :load "dedicated.el")
         (:name magit)
         (:name markdown-mode)
         (:name naquadah-theme
                :after (lambda () (require 'naquadah-theme)))
         (:name rainbow-mode)
+        (:name nav)
         (:name tabbar
                :type elpa)
         (:name tabbar-ruler
-               :type elpa
-               :after (lambda () (load "config/modes/tabbar")))
+               :type elpa)
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
@@ -41,21 +44,20 @@
         (:name rvm)
         (:name inf-ruby
                :type elpa
-               :load "inf-ruby.el"
-               :after (lambda () (load "config/modes/inf-ruby")))
+               :load "inf-ruby.el")
         (:name rhtml
                :type git
                :url "https://github.com/eschulte/rhtml.git"
                :compile ()
                :features rhtml-mode)
         (:name rinari)
-        (:name ruby-compilation :type elpa)
+        (:name ruby-compilation
+               :type elpa)
         (:name ruby-electric
                :type elpa)
         (:name ruby-mode
                :type elpa
-               :load "ruby-mode.el"
-               :after (lambda () (load "config/modes/ruby")))
+               :load "ruby-mode.el")
 
         ;; javascript related packages
         (:name coffee-mode)
