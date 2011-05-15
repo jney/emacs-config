@@ -4,6 +4,7 @@
 ;; some deletion
 (global-set-key [backspace] 'jney/backward-delete-rectangle-or-region-or-char)
 (global-set-key [(alt backspace)] 'backward-kill-word)
+(global-set-key [(control shift k)] 'jney/backward-kill-line)
 (global-set-key [(super backspace)] 'jney/backward-kill-line)
 (global-set-key [(super shift k)] 'jney/delete-line)
 
@@ -33,7 +34,7 @@
 
 ;; move current line
 (global-set-key [(control super down)] 'jney/move-text-down)
-(global-set-key [(control super up)] 'jney/move-text-upw)
+(global-set-key [(control super up)] 'jney/move-text-up)
 
 ;; nav
 (global-set-key [(super n)] 'jney/toggle-nav)

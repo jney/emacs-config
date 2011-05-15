@@ -64,6 +64,7 @@
     (insert-buffer-substring (current-buffer) start end)
     (forward-line -1)))
 
+;;
 (defun jney/ido-find-project ()
   "Open a project from src folder"
   (interactive)
@@ -71,6 +72,7 @@
    (concat "~/src/" (ido-completing-read
                      "Project: " (directory-files "~/src/" nil "^[^.]")))))
 
+;;
 (defun jney/move-text (arg)
   (cond
    ((and mark-active transient-mark-mode)
@@ -94,12 +96,14 @@
         (forward-line -1))
       (move-to-column column t)))))
 
+;;
 (defun jney/move-text-down (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines down."
   (interactive "*p")
   (jney/move-text arg))
 
+;;
 (defun jney/move-text-up (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines up."
