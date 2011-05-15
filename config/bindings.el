@@ -51,3 +51,20 @@
 ;; indent
 (global-set-key [(super control left)] 'textmate-shift-left)
 (global-set-key [(super control right)] 'textmate-shift-right)
+
+;;
+(global-set-key [(super +)] 'jney/change-num-at-point/+)
+(global-set-key [(super -)] 'jney/change-num-at-point/-)
+
+;; rebinding center-line
+(global-set-key [(super =)] 'center-line)
+
+
+
+
+
+
+
+
+
+

@@ -15,6 +15,24 @@
   (kill-line 0))
 
 ;;
+(require 'thingatpt)
+(defun jney/change-num-at-point (fn)
+  (let* ((num (string-to-number (thing-at-point 'word)))
+         (bounds (bounds-of-thing-at-point 'word)))
+    (save-excursion
+      (goto-char (car bounds))
+      (kill-word 1)
+      (insert (number-to-string (funcall fn num 1))))))
+
+(defun jney/change-num-at-point/+ ()
+  (interactive)
+  (jney/change-num-at-point '+))
+
+(defun jney/change-num-at-point/- ()
+  (interactive)
+  (jney/change-num-at-point '-))
+
+;;
 (defun jney/close-tab ()
   (interactive)
   (when (functionp 'tabbar-mode)
