@@ -19,6 +19,7 @@
 (load "config/modes/auto-complete")
 (load "config/modes/coffee")
 (load "config/modes/css")
+;; (load "config/modes/erlang")
 (load "config/modes/eshell")
 (load "config/modes/jade")
 (load "config/modes/js")
@@ -37,6 +38,6 @@
   (cua-mode 1))
 
 ;; switch to fullscreen
-(jney-toggle-fullscreen)
+(jney/toggle-fullscreen)
 
 (server-start)
