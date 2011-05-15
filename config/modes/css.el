@@ -2,7 +2,8 @@
           '(lambda ()
              (set-fill-column 79)
              (setq css-indent-offset 2)
-             ;; (add-hook 'after-save-hook (lambda () (css-check)))
+             (add-hook 'after-save-hook
+                       (lambda () (css-check)) nil t)
              (autopair-mode 1)
              (rainbow-mode 1)))
 
