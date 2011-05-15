@@ -6,6 +6,8 @@
 
 ;; utf-8 please
 (prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
 
 ;; Blinking vertical bars are all the cursory rage...
 (setq cursor-type 'bar)
@@ -20,8 +22,8 @@
 ;; Can delete a selected region
 (delete-selection-mode t)
 
-;; Wrap at 80 chars
-(set-default 'fill-column 80)
+;; Wrap at 79 chars
+(set-default 'fill-column 79)
 
 ;; Kill trailing whitespace on save
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
