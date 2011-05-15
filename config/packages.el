@@ -26,6 +26,7 @@
         (:name markdown-mode)
         (:name naquadah-theme
                :load "naquadah-theme.el")
+        (:name pos-tip)
         (:name rainbow-mode)
         (:name nav)
         (:name tabbar
