@@ -1,5 +1,8 @@
+;; everything about autocompletion
+;; auto-complete and yasnippets
+
 (autoload 'auto-complete-mode  "auto-complete" "" t)
-;; Don't ignore case or don't be smart
+;; Don't ignore case and don't be smart
 (setq ac-ignore-case nil)
 (setq ac-use-fuzzy t)
 (setq ac-use-quick-help t)
@@ -21,6 +24,9 @@
                           (yas/expand))
                ad-do-it)))))
 (yas/advise-indent-function 'ruby-indent-line)
+
+;; load my own snippets
+(yas/load-directory (concat dotfiles-dir "config/snippets/"))
 
 ;; auto-complete for everything
 (global-auto-complete-mode t)
