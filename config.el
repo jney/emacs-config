@@ -19,7 +19,7 @@
 (load "config/modes/auto-complete")
 (load "config/modes/coffee")
 (load "config/modes/css")
-;; (load "config/modes/erlang")
+(load "config/modes/erlang")
 (load "config/modes/eshell")
 (load "config/modes/jade")
 (load "config/modes/js")
@@ -33,7 +33,11 @@
 (if (file-exists-p system-type-specific-config)
     (load system-type-specific-config))
 
-;; cua mode
+;; column number
+(when (functionp 'column-number-mode)
+  (column-number-mode 1))
+
+;; cua
 (when (functionp 'cua-mode)
   (cua-mode 1))
 
