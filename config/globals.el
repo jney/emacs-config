@@ -41,3 +41,5 @@
 ;; font
 (setq mac-allow-anti-aliasing t)
 
+;; enabling narrowing
+(put 'narrow-to-region 'disabled nil)
