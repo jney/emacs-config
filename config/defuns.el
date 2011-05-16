@@ -24,10 +24,12 @@
       (kill-word 1)
       (insert (number-to-string (funcall fn num 1))))))
 
+;;
 (defun jney/change-num-at-point/+ ()
   (interactive)
   (jney/change-num-at-point '+))
 
+;;
 (defun jney/change-num-at-point/- ()
   (interactive)
   (jney/change-num-at-point '-))
@@ -90,6 +92,27 @@
    (concat "~/src/" (ido-completing-read
                      "Project: " (directory-files "~/src/" nil "^[^.]")))))
 
+;; from http://platypope.org/blog/2007/8/5/a-compendium-of-awesomeness
+;; I-search with initial contents
+(defvar jney/isearch-initial-string nil)
+
+(defun jney/isearch-set-initial-string ()
+  (remove-hook 'isearch-mode-hook 'jney/isearch-set-initial-string)
+  (setq isearch-string jney/isearch-initial-string)
+  (isearch-search-and-update))
+
+(defun jney/isearch-forward-at-point (&optional regexp-p no-recursive-edit)
+  "Interactive search forward for the symbol at point."
+  (interactive "P\np")
+  (if regexp-p (isearch-forward regexp-p no-recursive-edit)
+    (let* ((end (progn (skip-syntax-forward "w_") (point)))
+           (begin (progn (skip-syntax-backward "w_") (point))))
+      (if (eq begin end)
+          (isearch-forward regexp-p no-recursive-edit)
+        (setq jney/isearch-initial-string (buffer-substring begin end))
+        (add-hook 'isearch-mode-hook 'jney/isearch-set-initial-string)
+        (isearch-forward regexp-p no-recursive-edit)))))
+
 ;;
 (defun jney/move-text (arg)
   (cond
@@ -115,14 +138,14 @@
       (move-to-column column t)))))
 
 ;;
-(defun jney/move-text-down (arg)
+(defun jney/move-text/down (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines down."
   (interactive "*p")
   (jney/move-text arg))
 
 ;;
-(defun jney/move-text-up (arg)
+(defun jney/move-text/up (arg)
   "Move region (transient-mark-mode active) or current line
   arg lines up."
   (interactive "*p")

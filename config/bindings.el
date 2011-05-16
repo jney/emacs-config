@@ -18,6 +18,7 @@
 
 ;; replace
 (global-set-key [(super r)] 'replace-regexp)
+(global-set-key [(control *)] 'jney/isearch-forward-at-point)
 
 ;; deals with buffer
 (global-set-key [(super w)] 'jney/close-tab)
@@ -33,8 +34,8 @@
 (global-set-key [(super o)] 'jney/create-line-below)
 
 ;; move current line
-(global-set-key [(control super down)] 'jney/move-text-down)
-(global-set-key [(control super up)] 'jney/move-text-up)
+(global-set-key [(control super down)] 'jney/move-text/down)
+(global-set-key [(control super up)] 'jney/move-text/up)
 
 ;; nav
 (global-set-key [(super n)] 'jney/toggle-nav)
