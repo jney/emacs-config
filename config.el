@@ -33,11 +33,15 @@
 (if (file-exists-p system-type-specific-config)
     (load system-type-specific-config))
 
-;; column number
+;; autopair mode always enabled
+(when (functionp 'autopair-mode)
+  (autopair-mode 1))
+
+;; column number always enabled
 (when (functionp 'column-number-mode)
   (column-number-mode 1))
 
-;; cua
+;; cua always enabled
 (when (functionp 'cua-mode)
   (cua-mode 1))
 

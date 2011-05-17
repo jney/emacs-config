@@ -5,5 +5,4 @@
 
 (add-hook 'js2-mode-hook
           '(lambda ()
-             (setq js-indent-offset 2)
-             (autopair-mode 1)))
+             (setq js-indent-offset 2)))

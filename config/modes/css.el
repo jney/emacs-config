@@ -4,7 +4,6 @@
              (setq css-indent-offset 2)
              (add-hook 'after-save-hook
                        (lambda () (when (executable-find "csstidy") (css-check))) nil t)
-             (autopair-mode 1)
              (rainbow-mode 1)))
 
 (add-hook 'css-mode-hook 'run-coding-hook)

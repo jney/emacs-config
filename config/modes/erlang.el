@@ -6,6 +6,4 @@
           erlang-root-dir "/usr/local/lib/erlang"
           exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
     (require 'erlang-start)
-    (defvar inferior-erlang-prompt-timeout t)
-    ;; close parenthesis for me please
-    (autopair-mode 1)))
+    (defvar inferior-erlang-prompt-timeout t)))
