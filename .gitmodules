@@ -1,0 +1,9 @@
+[submodule "config/snippets/ruby-mode"]
+	path = config/snippets/ruby-mode
+	url = https://github.com/jney/yasnippet-ruby-mode.git
+[submodule "config/snippets/css-mode"]
+	path = config/snippets/css-mode
+	url = https://github.com/jney/yasnippet-css-mode.git
+[submodule "config/snippets/js-mode"]
+	path = config/snippets/js-mode
+	url = https://github.com/jney/yasnippet-js-mode.git
