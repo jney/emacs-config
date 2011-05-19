@@ -85,6 +85,19 @@
     (forward-line -1)))
 
 ;;
+(defun jney/go-to-tab-or-buffer/next ()
+  (interactive)
+  (if tabbar-current-tabset
+      (tabbar-forward-tab)
+    (next-buffer)))
+;;
+(defun jney/go-to-tab-or-buffer/previous ()
+  (interactive)
+  (if tabbar-current-tabset
+      (tabbar-backward-tab)
+    (previous-buffer)))
+
+;;
 (defun jney/ido-find-project ()
   "Open a project from src folder"
   (interactive)
