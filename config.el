@@ -33,9 +33,9 @@
 (if (file-exists-p system-type-specific-config)
     (load system-type-specific-config))
 
-;; autopair mode always enabled
+;; cua always enabled
 (when (functionp 'autopair-mode)
-  (autopair-mode 1))
+  (autopair-global-mode 1))
 
 ;; column number always enabled
 (when (functionp 'column-number-mode)
