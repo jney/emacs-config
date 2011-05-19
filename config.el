@@ -33,7 +33,7 @@
 (if (file-exists-p system-type-specific-config)
     (load system-type-specific-config))
 
-;; cua always enabled
+;; autopair always enabled
 (when (functionp 'autopair-mode)
   (autopair-global-mode 1))
 
