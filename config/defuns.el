@@ -85,13 +85,13 @@
     (forward-line -1)))
 
 ;;
-(defun jney/go-to-tab-or-buffer/next ()
+(defun jney/goto-tab-or-buffer/next ()
   (interactive)
   (if tabbar-current-tabset
       (tabbar-forward-tab)
     (next-buffer)))
 ;;
-(defun jney/go-to-tab-or-buffer/previous ()
+(defun jney/goto-tab-or-buffer/previous ()
   (interactive)
   (if tabbar-current-tabset
       (tabbar-backward-tab)
