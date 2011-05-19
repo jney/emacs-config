@@ -44,8 +44,8 @@
 ;; tabbar
 (global-set-key [(super t)] 'jney/tabbar-new-tab)
 (global-set-key [(super return)] 'jney/toggle-fullscreen)
-(global-set-key [(super alt left)] 'tabbar-backward-tab)
-(global-set-key [(super alt right)] 'tabbar-forward-tab)
+(global-set-key [(super alt left)] 'jney/go-to-bar-or-buffer/previous)
+(global-set-key [(super alt right)] 'jney/go-to-tab-or-buffer/next)
 
 ;; magit
 (global-set-key [(control shift g)] 'magit-status)

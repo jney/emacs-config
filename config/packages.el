@@ -17,6 +17,7 @@
         (:name auto-complete-yasnippet
                :type http
                :url "http://www.cx4a.org/pub/auto-complete-yasnippet.el")
+        (:name ac-dabbrev)
         (:name autopair)
         (:name dedicated
                :type http
