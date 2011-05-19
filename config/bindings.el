@@ -16,9 +16,10 @@
 (global-set-key [(alt left)] 'backward-word)
 (global-set-key [(alt right)] 'forward-word)
 
-;; replace
+;; search & replace
 (global-set-key [(super r)] 'replace-regexp)
 (global-set-key [(control *)] 'jney/isearch-forward-at-point)
+(global-set-key [(control %)] 'jney/goto-match-paren)
 
 ;; deals with buffer
 (global-set-key [(super w)] 'jney/close-tab)

@@ -114,6 +114,18 @@
         (isearch-forward regexp-p no-recursive-edit)))))
 
 ;;
+(defun jney/goto-match-paren (arg)
+  "Go to the matching  if on (){}[], similar to vi style of % "
+  (interactive "p")
+  ;; first, check for "outside of bracket" positions expected by forward-sexp, etc.
+  (cond ((looking-at "[\[\(\{]") (forward-sexp))
+        ((looking-back "[\]\)\}]" 1) (backward-sexp))
+        ;; now, try to succeed from inside of a bracket
+        ((looking-at "[\]\)\}]") (forward-char) (backward-sexp))
+        ((looking-back "[\[\(\{]" 1) (backward-char) (forward-sexp))
+        (t nil)))
+
+;;
 (defun jney/move-text (arg)
   (cond
    ((and mark-active transient-mark-mode)
