@@ -43,3 +43,7 @@
 
 ;; enabling narrowing
 (put 'narrow-to-region 'disabled nil)
+
+;; love newline but yasnippet doesn't
+(setq require-final-newline nil)
+
