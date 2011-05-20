@@ -80,9 +80,10 @@
   "Duplicate current line"
   (interactive)
   (let ((start (progn (beginning-of-line) (point)))
-	(end (progn (next-line 1) (beginning-of-line) (point))))
+        (end (progn (next-line 1) (beginning-of-line) (point))))
     (insert-buffer-substring (current-buffer) start end)
-    (forward-line -1)))
+    (forward-line -1)
+    (end-of-line)))
 
 ;;
 (defun jney/goto-tab-or-buffer/next ()
