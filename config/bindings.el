@@ -60,13 +60,3 @@
 
 ;; rebinding center-line
 (global-set-key [(super =)] 'center-line)
-
-
-
-
-
-
-
-
-
-
