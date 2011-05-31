@@ -7,3 +7,6 @@
 [submodule "config/snippets/js-mode"]
 	path = config/snippets/js-mode
 	url = https://github.com/jney/yasnippet-js-mode.git
+[submodule "config/snippets/html-mode"]
+	path = config/snippets/html-mode
+	url = https://github.com/jney/yasnippet-html-mode.git
