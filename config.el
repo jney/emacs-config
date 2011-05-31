@@ -21,6 +21,7 @@
 (load "config/modes/css")
 (load "config/modes/erlang")
 (load "config/modes/eshell")
+(load "config/modes/html")
 (load "config/modes/jade")
 (load "config/modes/js")
 (load "config/modes/nav")
