@@ -24,7 +24,6 @@
 (load "config/modes/html")
 (load "config/modes/jade")
 (load "config/modes/js")
-(load "config/modes/nav")
 (load "config/modes/org")
 (load "config/modes/ruby")
 (load "config/modes/shell")
@@ -46,6 +45,10 @@
 (when (functionp 'cua-mode)
   (cua-mode 1))
 
+(when (fboundp 'ido-mode)
+  (ido-mode t)
+  (setq ido-save-directory-list-file nil)
+  )
 ;; switch to fullscreen
 (jney/toggle-fullscreen)
 

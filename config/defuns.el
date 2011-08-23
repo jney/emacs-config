@@ -2,7 +2,7 @@
 (defun jney/backward-delete-rectangle-or-region-or-char ()
   "Backward delete a region or a single character."
   (interactive)
-  (if cua--rectangle
+  (if (and (boundp cua--rectangle) cua--rectangle)
       (cua-delete-rectangle)
     (if mark-active
         (kill-region (region-beginning) (region-end))
@@ -84,6 +84,19 @@
     (insert-buffer-substring (current-buffer) start end)
     (forward-line -1)
     (end-of-line)))
+
+;;
+(defun jney/enable-horizontal-scrolling ()
+  "Enable horizontal scrolling"
+  (if (boundp 'truncate-lines)
+      (setq-default truncate-lines t) ; always truncate
+    (progn
+      (hscroll-global-mode t)
+      (setq hscroll-margin 1)
+      (setq auto-hscroll-mode 1)
+      (setq automatic-hscrolling t)
+      )
+    ))
 
 ;;
 (defun jney/goto-tab-or-buffer/next ()
@@ -194,6 +207,12 @@
         (t (beginning-of-buffer)
            (replace-regexp))))
 
+;;
+(defun jney/replace-string ()
+  (interactive)
+  (beginning-of-buffer)
+  (replace-string))
+
 ;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
 (defun jney/rename-file-and-buffer (new-name)
   "Renames both current buffer and file it's visiting to NEW-NAME."
@@ -252,9 +271,3 @@ if specified), in current window."
       (ns-toggle-fullscreen)
     (toggle-fullscreen)))
 
-;;
-(defun jney/toggle-nav ()
-  "Toggle nav."
-  (interactive)
-  (if (eq nil (get-buffer "*nav*"))
-      (nav)))

@@ -38,9 +38,6 @@
 (global-set-key [(control super down)] 'jney/move-text/down)
 (global-set-key [(control super up)] 'jney/move-text/up)
 
-;; nav
-(global-set-key [(super n)] 'jney/toggle-nav)
-
 ;; tabbar
 (global-set-key [(super t)] 'jney/tabbar-new-tab)
 (global-set-key [(super return)] 'jney/toggle-fullscreen)

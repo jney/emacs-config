@@ -29,14 +29,13 @@
                :load "naquadah-theme.el")
         (:name pos-tip)
         (:name rainbow-mode)
-        (:name nav)
         (:name tabbar
                :type elpa)
         (:name tabbar-ruler
                :type elpa)
         (:name textmate
                :type git
-               :url "git://github.com/defunkt/textmate.el"
+               :url "https://github.com/defunkt/textmate.el"
                :load "textmate.el"
                :after (lambda () (textmate-mode 1)))
         (:name yaml-mode)
