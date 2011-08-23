@@ -29,6 +29,10 @@
                :load "naquadah-theme.el")
         (:name pos-tip)
         (:name rainbow-mode)
+        (:name sr-speedbar
+               :type http
+               :url "http://www.emacswiki.org/emacs/download/sr-speedbar.el"
+               :load "sr-speedbar.el")
         (:name tabbar
                :type elpa)
         (:name tabbar-ruler

@@ -51,6 +51,9 @@
 (global-set-key [(super control left)] 'textmate-shift-left)
 (global-set-key [(super control right)] 'textmate-shift-right)
 
+;; speedbar
+(global-set-key [(super n)] 'sr-speedbar-toggle)
+
 ;;
 (global-set-key [(super +)] 'jney/change-num-at-point/+)
 (global-set-key [(super -)] 'jney/change-num-at-point/-)
