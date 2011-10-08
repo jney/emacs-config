@@ -24,9 +24,11 @@
 (load "config/modes/html")
 (load "config/modes/jade")
 (load "config/modes/js")
+(load "config/modes/linum")
 (load "config/modes/org")
 (load "config/modes/ruby")
 (load "config/modes/shell")
+(load "config/modes/speedbar")
 (load "config/modes/tabbar")
 (load "config/modes/whitespace")
 
